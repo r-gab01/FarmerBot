@@ -1,0 +1,198 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34a7c8ca992f915438a96c2077353778, type: 3}
+  m_Name: IsDryPlantController
+  m_EditorClassIdentifier: 
+  brickName: Assets/BehaviorBricks/IsDryPlantController.asset
+  xml: "\uFEFF<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<BehaviorBricks xmlns:ref=\"urn:padaone\"
+    version=\"1.0\">\r\n  <BehaviorTree id=\"0\" />\r\n  <runtimeInfo>\r\n    <BehaviorTree
+    id=\"0\" guid=\"c7c516dfc97a2af4286926f21e73b975\" nextId=\"10\">\r\n      <root>\r\n       
+    <SequenceNode id=\"1\" />\r\n      </root>\r\n      <inputParams>\r\n       
+    <inputValues>\r\n          <entry name=\"plantStats\" type=\"PlantStats\" isBlackboard=\"True\"
+    blackboard=\"plantStats\" />\r\n          <entry name=\"agentPlantManager\" type=\"AgentPlantManager\"
+    isBlackboard=\"True\" blackboard=\"agentPlantManager\" />\r\n          <entry
+    name=\"agentDirection\" type=\"UnityEngine.Transform\" isBlackboard=\"True\"
+    blackboard=\"agentDirection\" />\r\n          <entry name=\"robotHandPosition\"
+    type=\"UnityEngine.Transform\" isBlackboard=\"True\" blackboard=\"robotHandPosition\"
+    />\r\n          <entry name=\"agentMap\" type=\"AgentMap\" isBlackboard=\"True\"
+    blackboard=\"agentMap\" />\r\n          <entry name=\"agent\" type=\"UnityEngine.AI.NavMeshAgent\"
+    isBlackboard=\"True\" blackboard=\"agent\" />\r\n          <entry name=\"animator\"
+    type=\"UnityEngine.Animator\" isBlackboard=\"True\" blackboard=\"animator\" />\r\n         
+    <entry name=\"agentStatistics\" type=\"AgentStatistics\" isBlackboard=\"True\"
+    blackboard=\"agentStatistics\" />\r\n          <entry name=\"nextPlantPos\" type=\"System.String\"
+    isBlackboard=\"True\" blackboard=\"nextPlantPos\" />\r\n          <entry name=\"nextPlantID\"
+    type=\"System.String\" isBlackboard=\"True\" blackboard=\"nextPlantID\" />\r\n         
+    <entry name=\"PlantInfoUI\" type=\"UnityEngine.GameObject\" isBlackboard=\"True\"
+    blackboard=\"PlantInfoUI\" />\r\n          <entry name=\"potPrefab\" type=\"UnityEngine.GameObject\"
+    isBlackboard=\"True\" blackboard=\"potPrefab\" />\r\n          <entry name=\"agentAudioManager\"
+    type=\"AgentAudioManager\" isBlackboard=\"False\" />\r\n        </inputValues>\r\n     
+    </inputParams>\r\n      <outputParams>\r\n        <outputValues>\r\n         
+    <entry name=\"dryBool\" type=\"System.Boolean\" isBlackboard=\"True\" blackboard=\"dryBool\"
+    />\r\n          <entry name=\"nextSlotInHouse\" type=\"System.String\" isBlackboard=\"True\"
+    blackboard=\"nextSlotInHouse\" />\r\n          <entry name=\"plant\" type=\"UnityEngine.GameObject\"
+    isBlackboard=\"True\" blackboard=\"plant\" />\r\n          <entry name=\"direction\"
+    type=\"UnityEngine.Transform\" isBlackboard=\"True\" blackboard=\"direction\"
+    />\r\n          <entry name=\"pots\" type=\"UnityEngine.GameObject\" isBlackboard=\"True\"
+    blackboard=\"pots\" />\r\n          <entry name=\"sickBool\" type=\"System.Boolean\"
+    isBlackboard=\"True\" />\r\n          <entry name=\"matureBool\" type=\"System.Boolean\"
+    isBlackboard=\"True\" />\r\n        </outputValues>\r\n      </outputParams>\r\n     
+    <localParams />\r\n    </BehaviorTree>\r\n    <SequenceNode id=\"1\">\r\n     
+    <children>\r\n        <elem>\r\n          <ActionNode id=\"2\" />\r\n       
+    </elem>\r\n        <elem>\r\n          <ActionNode id=\"3\" />\r\n        </elem>\r\n       
+    <elem>\r\n          <SubbehaviorNode id=\"9\" />\r\n        </elem>\r\n       
+    <elem>\r\n          <ActionNode id=\"4\" />\r\n        </elem>\r\n        <elem>\r\n         
+    <ActionNode id=\"5\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode
+    id=\"6\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"7\"
+    />\r\n        </elem>\r\n      </children>\r\n      <inputParams />\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </SequenceNode>\r\n    <ActionNode
+    id=\"2\" action=\"MyNode/IsDry\">\r\n      <inputParams>\r\n        <inputValues>\r\n         
+    <entry name=\"plantStats\" type=\"PlantStats\" isBlackboard=\"True\" blackboard=\"plantStats\"
+    />\r\n          <entry name=\"agentAudioManager\" type=\"AgentAudioManager\"
+    isBlackboard=\"True\" blackboard=\"agentAudioManager\" />\r\n        </inputValues>\r\n     
+    </inputParams>\r\n      <outputParams>\r\n        <outputValues>\r\n         
+    <entry name=\"dryBool\" type=\"System.Boolean\" isBlackboard=\"True\" blackboard=\"dryBool\"
+    />\r\n        </outputValues>\r\n      </outputParams>\r\n      <localParams
+    />\r\n    </ActionNode>\r\n    <ActionNode id=\"3\" action=\"MyNode/NextSlotInDry\">\r\n     
+    <inputParams>\r\n        <inputValues>\r\n          <entry name=\"agentPlantManager\"
+    type=\"AgentPlantManager\" isBlackboard=\"True\" blackboard=\"agentPlantManager\"
+    />\r\n          <entry name=\"agentAudioManager\" type=\"AgentAudioManager\"
+    isBlackboard=\"True\" blackboard=\"agentAudioManager\" />\r\n        </inputValues>\r\n     
+    </inputParams>\r\n      <outputParams>\r\n        <outputValues>\r\n         
+    <entry name=\"nextFreeDrySlot\" type=\"System.String\" isBlackboard=\"True\"
+    blackboard=\"nextSlotInHouse\" />\r\n        </outputValues>\r\n      </outputParams>\r\n     
+    <localParams />\r\n    </ActionNode>\r\n    <SubbehaviorNode id=\"9\">\r\n     
+    <_guid>96f299cc1c337844fb0131d4f24b94b5</_guid>\r\n      <inputParams>\r\n       
+    <inputValues>\r\n          <entry name=\"agentMap\" type=\"AgentMap\" isBlackboard=\"True\"
+    blackboard=\"agentMap\" />\r\n          <entry name=\"agent\" type=\"UnityEngine.AI.NavMeshAgent\"
+    isBlackboard=\"True\" blackboard=\"agent\" />\r\n          <entry name=\"animator\"
+    type=\"UnityEngine.Animator\" isBlackboard=\"True\" blackboard=\"animator\" />\r\n         
+    <entry name=\"agentStatistics\" type=\"AgentStatistics\" isBlackboard=\"True\"
+    blackboard=\"agentStatistics\" />\r\n          <entry name=\"direction\" type=\"UnityEngine.Transform\"
+    isBlackboard=\"True\" blackboard=\"direction\" />\r\n          <entry name=\"agentDirection\"
+    type=\"UnityEngine.Transform\" isBlackboard=\"True\" blackboard=\"agentDirection\"
+    />\r\n          <entry name=\"plantStats\" type=\"PlantStats\" isBlackboard=\"True\"
+    blackboard=\"plantStats\" />\r\n          <entry name=\"robotHandPosition\" type=\"UnityEngine.Transform\"
+    isBlackboard=\"True\" blackboard=\"robotHandPosition\" />\r\n          <entry
+    name=\"potPrefab\" type=\"UnityEngine.GameObject\" isBlackboard=\"True\" blackboard=\"potPrefab\"
+    />\r\n          <entry name=\"nextPlantPos\" type=\"System.String\" isBlackboard=\"True\"
+    blackboard=\"nextPlantPos\" />\r\n          <entry name=\"agentAudioManager\"
+    type=\"AgentAudioManager\" isBlackboard=\"False\" />\r\n        </inputValues>\r\n     
+    </inputParams>\r\n      <outputParams>\r\n        <outputValues>\r\n         
+    <entry name=\"sickBool\" type=\"System.Boolean\" isBlackboard=\"True\" blackboard=\"sickBool\"
+    />\r\n          <entry name=\"pots\" type=\"UnityEngine.GameObject\" isBlackboard=\"True\"
+    blackboard=\"pots\" />\r\n        </outputValues>\r\n      </outputParams>\r\n     
+    <localParams />\r\n    </SubbehaviorNode>\r\n    <ActionNode id=\"4\" action=\"MyNode/TakePlant\">\r\n     
+    <inputParams>\r\n        <inputValues>\r\n          <entry name=\"agentDirection\"
+    type=\"UnityEngine.Transform\" isBlackboard=\"True\" blackboard=\"agentDirection\"
+    />\r\n          <entry name=\"robotHandPosition\" type=\"UnityEngine.Transform\"
+    isBlackboard=\"True\" blackboard=\"robotHandPosition\" />\r\n          <entry
+    name=\"sickBool\" type=\"System.Boolean\" isBlackboard=\"True\" blackboard=\"sickBool\"
+    />\r\n          <entry name=\"dryBool\" type=\"System.Boolean\" isBlackboard=\"True\"
+    blackboard=\"dryBool\" />\r\n          <entry name=\"matureBool\" type=\"System.Boolean\"
+    isBlackboard=\"True\" blackboard=\"matureBool\" />\r\n          <entry name=\"nextSlotInHouse\"
+    type=\"System.String\" isBlackboard=\"True\" blackboard=\"nextSlotInHouse\" />\r\n         
+    <entry name=\"agentPlantManager\" type=\"AgentPlantManager\" isBlackboard=\"True\"
+    blackboard=\"agentPlantManager\" />\r\n          <entry name=\"pots\" type=\"UnityEngine.GameObject\"
+    isBlackboard=\"True\" blackboard=\"pots\" />\r\n        </inputValues>\r\n     
+    </inputParams>\r\n      <outputParams>\r\n        <outputValues>\r\n         
+    <entry name=\"plant\" type=\"UnityEngine.GameObject\" isBlackboard=\"True\" blackboard=\"plant\"
+    />\r\n        </outputValues>\r\n      </outputParams>\r\n      <localParams
+    />\r\n    </ActionNode>\r\n    <ActionNode id=\"5\" action=\"MyNode/GoToPoint\">\r\n     
+    <inputParams>\r\n        <inputValues>\r\n          <entry name=\"agentMap\"
+    type=\"AgentMap\" isBlackboard=\"True\" blackboard=\"agentMap\" />\r\n         
+    <entry name=\"pointName\" type=\"System.String\" isBlackboard=\"True\" blackboard=\"nextSlotInHouse\"
+    />\r\n          <entry name=\"agent\" type=\"UnityEngine.AI.NavMeshAgent\" isBlackboard=\"True\"
+    blackboard=\"agent\" />\r\n          <entry name=\"animator\" type=\"UnityEngine.Animator\"
+    isBlackboard=\"True\" blackboard=\"animator\" />\r\n          <entry name=\"agentStatistics\"
+    type=\"AgentStatistics\" isBlackboard=\"True\" blackboard=\"agentStatistics\"
+    />\r\n          <entry name=\"agentAudioManager\" type=\"AgentAudioManager\"
+    isBlackboard=\"True\" blackboard=\"agentAudioManager\" />\r\n        </inputValues>\r\n     
+    </inputParams>\r\n      <outputParams>\r\n        <outputValues>\r\n         
+    <entry name=\"direction\" type=\"UnityEngine.Transform\" isBlackboard=\"True\"
+    blackboard=\"direction\" />\r\n        </outputValues>\r\n      </outputParams>\r\n     
+    <localParams />\r\n    </ActionNode>\r\n    <ActionNode id=\"6\" action=\"MyNode/RotateTowardsTarget\">\r\n     
+    <inputParams>\r\n        <inputValues>\r\n          <entry name=\"direction\"
+    type=\"UnityEngine.Transform\" isBlackboard=\"True\" blackboard=\"direction\"
+    />\r\n          <entry name=\"agentDirection\" type=\"UnityEngine.Transform\"
+    isBlackboard=\"True\" blackboard=\"agentDirection\" />\r\n        </inputValues>\r\n     
+    </inputParams>\r\n      <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n   
+    <ActionNode id=\"7\" action=\"MyNode/PlacePlant\">\r\n      <inputParams>\r\n       
+    <inputValues>\r\n          <entry name=\"plant\" type=\"UnityEngine.GameObject\"
+    isBlackboard=\"True\" blackboard=\"plant\" />\r\n          <entry name=\"robotHandPosition\"
+    type=\"UnityEngine.Transform\" isBlackboard=\"True\" blackboard=\"robotHandPosition\"
+    />\r\n          <entry name=\"agentDirection\" type=\"UnityEngine.Transform\"
+    isBlackboard=\"True\" blackboard=\"agentDirection\" />\r\n          <entry name=\"agentPlantManager\"
+    type=\"AgentPlantManager\" isBlackboard=\"True\" blackboard=\"agentPlantManager\"
+    />\r\n          <entry name=\"nextPlantPos\" type=\"System.String\" isBlackboard=\"True\"
+    blackboard=\"nextPlantPos\" />\r\n          <entry name=\"nextPlant\" type=\"System.String\"
+    isBlackboard=\"True\" blackboard=\"nextPlantID\" />\r\n          <entry name=\"matureBool\"
+    type=\"System.Boolean\" isBlackboard=\"True\" blackboard=\"matureBool\" />\r\n         
+    <entry name=\"PlantInfoUI\" type=\"UnityEngine.GameObject\" isBlackboard=\"True\"
+    blackboard=\"PlantInfoUI\" />\r\n          <entry name=\"agentAudioManager\"
+    type=\"AgentAudioManager\" isBlackboard=\"True\" blackboard=\"agentAudioManager\"
+    />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n     
+    <localParams />\r\n    </ActionNode>\r\n  </runtimeInfo>\r\n  <editorInfo>\r\n   
+    <BehaviorTree id=\"0\" _name=\"IsDryPlantController\" _description=\"\" _removeIfClosed=\"False\">\r\n     
+    <_rootList>\r\n        <elem>\r\n          <SequenceNode id=\"1\" />\r\n       
+    </elem>\r\n        <elem>\r\n          <ActionNode id=\"2\" />\r\n        </elem>\r\n       
+    <elem>\r\n          <ActionNode id=\"3\" />\r\n        </elem>\r\n        <elem>\r\n         
+    <ActionNode id=\"4\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode
+    id=\"5\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"6\"
+    />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"7\" />\r\n       
+    </elem>\r\n        <elem>\r\n          <SubbehaviorNode id=\"9\" />\r\n       
+    </elem>\r\n      </_rootList>\r\n      <_nodes>\r\n        <nodes>\r\n         
+    <SequenceNode id=\"1\" />\r\n          <ActionNode id=\"2\" />\r\n          <ActionNode
+    id=\"3\" />\r\n          <ActionNode id=\"4\" />\r\n          <ActionNode id=\"5\"
+    />\r\n          <ActionNode id=\"6\" />\r\n          <ActionNode id=\"7\" />\r\n         
+    <SubbehaviorNode id=\"9\" />\r\n        </nodes>\r\n      </_nodes>\r\n    </BehaviorTree>\r\n   
+    <SequenceNode id=\"1\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"1031.783 237.3746\" name=\"Sequence\" description=\"Executes all its
+    children in sequence until all of them are successful\" cardinality=\"-1\" hasParent=\"False\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"1\" />\r\n        </data>\r\n     
+    </_data>\r\n    </SequenceNode>\r\n    <ActionNode id=\"2\">\r\n      <_data>\r\n       
+    <data breakpoint=\"0\" selected=\"False\" position=\"309.8916 437.9968\" name=\"MyNode/IsDry\"
+    description=\"\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <ActionNode id=\"2\" />\r\n          <SequenceNode id=\"1\"
+    />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n    <ActionNode
+    id=\"3\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"434.7161 447.0764\" name=\"MyNode/NextSlotInDry\" description=\"\"
+    cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
+    <ActionNode id=\"3\" />\r\n          <SequenceNode id=\"1\" />\r\n        </data>\r\n     
+    </_data>\r\n    </ActionNode>\r\n    <SubbehaviorNode id=\"9\">\r\n      <_data>\r\n       
+    <data breakpoint=\"0\" selected=\"True\" position=\"633.5354 444.8858\" name=\"TakePotController\"
+    description=\"\" cardinality=\"-1\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <SubbehaviorNode id=\"9\" />\r\n          <SequenceNode
+    id=\"1\" />\r\n        </data>\r\n      </_data>\r\n    </SubbehaviorNode>\r\n   
+    <ActionNode id=\"4\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"909.7005 449.6796\" name=\"MyNode/TakePlant\" description=\"Identifica
+    una pianta nel terreno e la prende.\" cardinality=\"0\" hasParent=\"True\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"4\" />\r\n          <SequenceNode
+    id=\"1\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
+    <ActionNode id=\"5\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"1054.654 447.3176\" name=\"MyNode/GoToPoint\" description=\"\" cardinality=\"0\"
+    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
+    id=\"5\" />\r\n          <SequenceNode id=\"1\" />\r\n        </data>\r\n     
+    </_data>\r\n    </ActionNode>\r\n    <ActionNode id=\"6\">\r\n      <_data>\r\n       
+    <data breakpoint=\"0\" selected=\"False\" position=\"1221.282 440.5746\" name=\"MyNode/RotateTowardsTarget\"
+    description=\"\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <ActionNode id=\"6\" />\r\n          <SequenceNode id=\"1\"
+    />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n    <ActionNode
+    id=\"7\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"1498.924 446.808\" name=\"MyNode/PlacePlant\" description=\"Posiziona
+    una pianta in un punto specifico una volta che \xE8 nella mano del robot.\" cardinality=\"0\"
+    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
+    id=\"7\" />\r\n          <SequenceNode id=\"1\" />\r\n        </data>\r\n     
+    </_data>\r\n    </ActionNode>\r\n  </editorInfo>\r\n</BehaviorBricks>"
+  zoom: 0.5
+  subslist:
+  - {fileID: 11400000, guid: 96f299cc1c337844fb0131d4f24b94b5, type: 2}
+  _guid: c7c516dfc97a2af4286926f21e73b975
