@@ -75,3 +75,5 @@ Key C# scripts driving FarmerBot's behavior (located in `Assets/Scripts/`):
 5.  **Run Simulation**: Press the **Play `[►]`** button in the Unity Editor.
 6.  **Interact**: Drag and drop plants during runtime to test the robot's real-time adaptation and path recalculation.
 
+## 📄 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
